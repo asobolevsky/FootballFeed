@@ -7,12 +7,16 @@
 
 import Foundation
 
-struct Country: Identifiable, Codable {
-    var id: String {
-        return name
-    }
-    
+struct Country: Codable {
     let name: String
     let code: String?
     let flag: String?
 }
+
+extension Country: Identifiable {
+    var id: String {
+        return name
+    }
+}
+
+extension Country: Hashable, Equatable {}

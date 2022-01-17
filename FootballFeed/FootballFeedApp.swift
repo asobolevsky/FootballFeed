@@ -11,7 +11,7 @@ import SwiftUI
 struct FootballFeedApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            StartingView()
         }
     }
 }
