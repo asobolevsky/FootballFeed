@@ -8,38 +8,48 @@
 import Foundation
 
 enum FootballAPIEndpoint {
-    
-    case countries(name: String? = nil, code: String? = nil, search: String? = nil)
-    
-    var headers: [String: String]? {
-        switch self {
-        default: return nil
-        }
+  
+  enum LeaguesType: String {
+    case league
+    case cup
+  }
+  
+  case countries(search: String)
+  case leagues(country: String, type: LeaguesType = .league)
+  
+  var headers: [String: String]? {
+    switch self {
+    default: return nil
     }
-    
-    var path: String {
-        switch self {
-        case .countries:
-            return "countries"
-        }
+  }
+  
+  var path: String {
+    switch self {
+    case .countries: return "countries"
+    case .leagues: return "leagues"
     }
-    
-    var parameters: [String: String]? {
-        switch self {
-        case .countries(let name, let code, let search):
-            return [
-                "name": name,
-                "code": code,
-                "search": search,
-            ].compactMapValues { $0 }
-        }
+  }
+  
+  var parameters: [String: String]? {
+    switch self {
+    case .countries(let search):
+      return [
+        "search": search,
+      ].compactMapValues { $0 }
+      
+    case .leagues(let country, let type):
+      return [
+        "country": country,
+        "type": type.rawValue
+      ].compactMapValues { $0 }
     }
-    
-    var fullPath: String {
-        var fullPath = path
-        if let queryString = parameters?.queryString {
-            fullPath += "?\(queryString)"
-        }
-        return fullPath
+  }
+  
+  var fullPath: String {
+    var fullPath = path
+    if let queryString = parameters?.queryString {
+      fullPath += "?\(queryString)"
     }
+    return fullPath
+  }
 }
