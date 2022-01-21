@@ -9,8 +9,8 @@ import Foundation
 
 struct Country: Codable {
     let name: String
-    let code: String?
-    let flag: String?
+    var code: String? = nil
+    var flag: String? = nil
 }
 
 extension Country: Identifiable {

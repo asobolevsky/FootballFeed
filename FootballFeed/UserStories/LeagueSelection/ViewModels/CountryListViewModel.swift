@@ -33,12 +33,8 @@ class CountryListViewModel: ObservableObject {
     return [ topLeaguePriorityFilter, currentCountryPriorityFilter ]
   }
   
-  init() {
-    fetchCountries()
-  }
-  
-  func fetchCountries() {
-    FootballAPIManager.shared.fetch(endpoint: .countries()) { (result: APIResult<[Country]>) in
+  func fetchCountries(search: String) {
+    FootballAPIManager.shared.fetch(endpoint: .countries(search: search)) { (result: APIResult<[Country]>) in
       switch result {
       case .success(let countries):
         DispatchQueue.main.async {
