@@ -8,15 +8,23 @@
 import SwiftUI
 
 struct SelectTeamsView: View {
-  let selectedLeague: League
+  var selectedLeague: League
+  @State var selectedTeam: Team?
   
   var body: some View {
-    Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+    VStack {
+      TeamListView(selectedTeam: $selectedTeam,
+                   viewModel: TeamListViewModel(for: selectedLeague))
+    }
+    .navigationTitle(Text("Select Teams"))
+    .onAppear {
+      selectedTeam = nil
+    }
   }
 }
 
 struct SelectTeamsView_Previews: PreviewProvider {
   static var previews: some View {
-    SelectTeamsView(selectedLeague: League.previewLeague)
+    SelectTeamsView(selectedLeague: League.test)
   }
 }

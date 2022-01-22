@@ -20,11 +20,11 @@ class LeagueListViewModel: ObservableObject {
   func fetchLeagues() {
     let countryName = country.name
     
-    FootballAPIManager.shared.fetch(endpoint: .leagues(country: countryName)) { (result: APIResult<[LeaguesResponseElement]>) in
+    FootballAPIManager.shared.fetch(endpoint: .leagues(country: countryName)) { (result: APIResult<[LeaguesResponseItem]>) in
       switch result {
-      case .success(let leaguesResponse):
+      case .success(let response):
         DispatchQueue.main.async {
-          self.leagues = leaguesResponse.map { $0.league }
+          self.leagues = response.map { $0.league }
         }
         
       default: break

@@ -13,7 +13,6 @@ struct LeagueListView: View {
   
   var body: some View {
     List(viewModel.leagues,
-         id: \.self,
          selection: $selectedLeague) { league in
       HStack {
         Text(league.name)
@@ -29,9 +28,9 @@ struct LeagueListView: View {
 
 struct LeagueListView_Previews: PreviewProvider {
   static var previews: some View {
-    let viewModel = LeagueListViewModel(for: Country.previewCountry)
+    let viewModel = LeagueListViewModel(for: Country.test)
     
-    LeagueListView(selectedLeague: .constant(League.previewLeague),
+    LeagueListView(selectedLeague: .constant(League.test),
                     viewModel: viewModel)
   }
 }

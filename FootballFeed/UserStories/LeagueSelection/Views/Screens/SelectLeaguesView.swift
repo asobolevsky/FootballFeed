@@ -33,6 +33,6 @@ struct SelectLeaguesView: View {
 
 struct SelectLeaguesView_Previews: PreviewProvider {
   static var previews: some View {
-    SelectLeaguesView(selectedCountry: Country.previewCountry)
+    SelectLeaguesView(selectedCountry: Country.test)
   }
 }

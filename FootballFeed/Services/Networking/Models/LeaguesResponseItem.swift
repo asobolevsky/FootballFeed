@@ -1,5 +1,5 @@
 //
-//  LeaguesResponseElement.swift
+//  LeaguesResponseItem.swift
 //  FootballFeed
 //
 //  Created by Алексей Соболевский on 2022-01-21.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct LeaguesResponseElement: Decodable {
+struct LeaguesResponseItem: Decodable {
   let league: League
   let seasons: [Season]
   let country: Country
