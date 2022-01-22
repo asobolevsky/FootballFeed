@@ -14,7 +14,6 @@ struct CountryListView: View {
   
   var body: some View {
     List(viewModel.countries,
-         id: \.self,
          selection: $selectedCountry) { country in
       HStack {
         Text(country.name)
@@ -41,7 +40,7 @@ struct CountryListView_Previews: PreviewProvider {
   static var previews: some View {
     let viewModel = CountryListViewModel()
     
-    CountryListView(selectedCountry: .constant(Country.previewCountry),
+    CountryListView(selectedCountry: .constant(Country.test),
                     viewModel: viewModel)
   }
 }

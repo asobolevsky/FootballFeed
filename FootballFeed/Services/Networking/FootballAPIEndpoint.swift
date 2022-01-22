@@ -16,6 +16,7 @@ enum FootballAPIEndpoint {
   
   case countries(search: String)
   case leagues(country: String, type: LeaguesType = .league)
+  case teams(leagueId: Int, season: Int)
   
   var headers: [String: String]? {
     switch self {
@@ -27,6 +28,7 @@ enum FootballAPIEndpoint {
     switch self {
     case .countries: return "countries"
     case .leagues: return "leagues"
+    case .teams: return "teams"
     }
   }
   
@@ -41,6 +43,12 @@ enum FootballAPIEndpoint {
       return [
         "country": country,
         "type": type.rawValue
+      ].compactMapValues { $0 }
+      
+    case .teams(let leagueID, let season):
+      return [
+        "league": "\(leagueID)",
+        "season": "\(season)"
       ].compactMapValues { $0 }
     }
   }
