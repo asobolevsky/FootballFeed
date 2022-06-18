@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>debug</key>
+	<dict>
+		<key>environment</key>
+		<string>debug</string>
+		<key>footballApiBaseUrl</key>
+		<string>https://v3.football.api-sports.io/</string>
+		<key>apiKey</key>
+		<string>dc9d9c2e1a821ea6877779b7b1ddf836</string>
+	</dict>
+</dict>
+</plist>
