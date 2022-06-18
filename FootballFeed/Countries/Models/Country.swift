@@ -13,7 +13,7 @@ struct Country: Codable {
     let flag: String?
 }
 
-extension Country: Identifiable {
+extension Country: Identifiable, Hashable {
     var id: String {
         return code ?? name
     }

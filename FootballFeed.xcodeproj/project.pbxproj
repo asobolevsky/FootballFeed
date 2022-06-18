@@ -25,6 +25,7 @@
 		5F84E1F0285D81F1002CE9F0 /* CountryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F84E1EF285D81F1002CE9F0 /* CountryRowView.swift */; };
 		5F84E1F3285D8255002CE9F0 /* Country+PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F84E1F2285D8255002CE9F0 /* Country+PreviewData.swift */; };
 		5F84E1F6285D84C0002CE9F0 /* Dictionary+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F84E1F5285D84C0002CE9F0 /* Dictionary+JSON.swift */; };
+		5FF34E5B285E3AC500A66A8E /* Set+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF34E5A285E3AC500A66A8E /* Set+Additions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		5F84E1EF285D81F1002CE9F0 /* CountryRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryRowView.swift; sourceTree = "<group>"; };
 		5F84E1F2285D8255002CE9F0 /* Country+PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Country+PreviewData.swift"; sourceTree = "<group>"; };
 		5F84E1F5285D84C0002CE9F0 /* Dictionary+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+JSON.swift"; sourceTree = "<group>"; };
+		5FF34E5A285E3AC500A66A8E /* Set+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Set+Additions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				5F84E1F5285D84C0002CE9F0 /* Dictionary+JSON.swift */,
+				5FF34E5A285E3AC500A66A8E /* Set+Additions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				5F84E1D5285D7300002CE9F0 /* CountriesAPI.swift in Sources */,
 				5F84E1BF285D7041002CE9F0 /* ContentView.swift in Sources */,
 				5F84E1CC285D71D3002CE9F0 /* NetworkManager.swift in Sources */,
+				5FF34E5B285E3AC500A66A8E /* Set+Additions.swift in Sources */,
 				5F84E1D9285D74FB002CE9F0 /* AppConfig.swift in Sources */,
 				5F84E1E8285D7E12002CE9F0 /* Country.swift in Sources */,
 				5F84E1DD285D799A002CE9F0 /* APIResource.swift in Sources */,
