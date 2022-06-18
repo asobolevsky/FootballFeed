@@ -12,9 +12,16 @@ struct CountryListView: View {
     @State private var errorMessage: String?
 
     var body: some View {
-        List {
-            ForEach(model.countryList) { country in
-                CountryRowView(country: country)
+        VStack {
+            if let errorMessage = errorMessage {
+                Text(errorMessage)
+            } else {
+                List {
+                    ForEach(model.countryList) { country in
+                        CountryRowView(country: country)
+                    }
+                }
+                .searchable(text: model.searchTextBinding, prompt: "Start entering country name")
             }
         }
         .onAppear {
