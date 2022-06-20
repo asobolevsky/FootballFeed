@@ -44,6 +44,7 @@
 		5FF34E8D285FFCBD00A66A8E /* Team+PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF34E8C285FFCBD00A66A8E /* Team+PreviewData.swift */; };
 		5FF34E8F285FFDDE00A66A8E /* TeamRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF34E8E285FFDDE00A66A8E /* TeamRowView.swift */; };
 		5FF34E932860015A00A66A8E /* DashboardTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF34E922860015A00A66A8E /* DashboardTabView.swift */; };
+		5FF34E97286002D200A66A8E /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF34E96286002D200A66A8E /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +85,7 @@
 		5FF34E8C285FFCBD00A66A8E /* Team+PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Team+PreviewData.swift"; sourceTree = "<group>"; };
 		5FF34E8E285FFDDE00A66A8E /* TeamRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamRowView.swift; sourceTree = "<group>"; };
 		5FF34E922860015A00A66A8E /* DashboardTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTabView.swift; sourceTree = "<group>"; };
+		5FF34E96286002D200A66A8E /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 		5F84E1BB285D7041002CE9F0 /* FootballFeed */ = {
 			isa = PBXGroup;
 			children = (
+				5FF34E94286002BA00A66A8E /* Profile */,
 				5FF34E912860014300A66A8E /* Dashboard */,
 				5FF34E90286000F100A66A8E /* TeamSelection */,
 				5F84E1F4285D84AF002CE9F0 /* Extensions */,
@@ -350,9 +353,9 @@
 		5FF34E90286000F100A66A8E /* TeamSelection */ = {
 			isa = PBXGroup;
 			children = (
-				5FF34E78285FF98800A66A8E /* Teams */,
 				5F84E1DF285D7D87002CE9F0 /* Countries */,
 				5FF34E5C285E4B2500A66A8E /* Leagues */,
+				5FF34E78285FF98800A66A8E /* Teams */,
 			);
 			path = TeamSelection;
 			sourceTree = "<group>";
@@ -363,6 +366,22 @@
 				5FF34E922860015A00A66A8E /* DashboardTabView.swift */,
 			);
 			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		5FF34E94286002BA00A66A8E /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				5FF34E95286002C900A66A8E /* Views */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		5FF34E95286002C900A66A8E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5FF34E96286002D200A66A8E /* ProfileView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -468,6 +487,7 @@
 				5FF34E82285FFAA800A66A8E /* TeamListResponse.swift in Sources */,
 				5FF34E84285FFAB100A66A8E /* Team.swift in Sources */,
 				5FF34E7F285FFA3000A66A8E /* TeamsAPI.swift in Sources */,
+				5FF34E97286002D200A66A8E /* ProfileView.swift in Sources */,
 				5F84E1F3285D8255002CE9F0 /* Country+PreviewData.swift in Sources */,
 				5F84E1BD285D7041002CE9F0 /* FootballFeedApp.swift in Sources */,
 				5F84E1F6285D84C0002CE9F0 /* Dictionary+JSON.swift in Sources */,

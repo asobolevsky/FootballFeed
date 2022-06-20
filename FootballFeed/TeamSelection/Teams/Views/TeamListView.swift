@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TeamListView: View {
     let league: League
+    @AppStorage("selectedTeams") var selectedTeams: Set<Team> = []
     @StateObject private var model = TeamListViewModel()
     @State private var errorMessage: String?
 
@@ -19,7 +20,11 @@ struct TeamListView: View {
             } else {
                 ZStack(alignment: .bottom) {
                     List(model.teamList) { team in
-                        TeamRowView(team: team)
+                        let isSelected = selectedTeams.contains(team)
+                        TeamRowView(team: team, isSelected: isSelected)
+                            .onTapGesture {
+                                selectedTeams.toggle(team)
+                            }
                     }
                     .searchable(text: $model.searchText, prompt: "Start entering team name")
                 }

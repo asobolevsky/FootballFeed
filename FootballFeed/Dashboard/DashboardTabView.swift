@@ -14,6 +14,11 @@ struct DashboardTabView: View {
                 .tabItem {
                     Label("Select", systemImage: "filemenu.and.selection")
                 }
+
+            ProfileView()
+                .tabItem {
+                    Label("Profile", systemImage: "person")
+                }
         }
     }
 }

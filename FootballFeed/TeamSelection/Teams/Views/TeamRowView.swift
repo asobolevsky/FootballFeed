@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TeamRowView: View {
     let team: Team
+    let isSelected: Bool
 
     var body: some View {
         HStack {
@@ -23,12 +24,19 @@ struct TeamRowView: View {
             .frame(width: 40, height: 40)
 
             Text(team.name)
+
+            if isSelected {
+                Spacer()
+                Image(systemName: "checkmark")
+                    .frame(width: 40, height: 40)
+                    .foregroundColor(.green)
+            }
         }
     }
 }
 
 struct TeamRowView_Previews: PreviewProvider {
     static var previews: some View {
-        TeamRowView(team: Team.example)
+        TeamRowView(team: Team.example, isSelected: true)
     }
 }
