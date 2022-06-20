@@ -12,24 +12,26 @@ struct CountryListView: View {
     @State private var errorMessage: String?
     
     var body: some View {
-        VStack {
-            if let errorMessage = errorMessage {
-                Text(errorMessage)
-            } else {
-                ZStack(alignment: .bottom) {
-                    List(model.countryList) { country in
-                        NavigationLink {
-                            LeagueListView(country: country)
-                        } label: {
-                            CountryRowView(country: country)
+        NavigationView {
+            VStack {
+                if let errorMessage = errorMessage {
+                    Text(errorMessage)
+                } else {
+                    ZStack(alignment: .bottom) {
+                        List(model.countryList) { country in
+                            NavigationLink {
+                                LeagueListView(country: country)
+                            } label: {
+                                CountryRowView(country: country)
+                            }
                         }
+                        .searchable(text: $model.searchText, prompt: "Start entering country name")
                     }
-                    .searchable(text: $model.searchText, prompt: "Start entering country name")
                 }
             }
+            .navigationTitle("Select Countries")
+            .navigationBarTitleDisplayMode(.inline)
         }
-        .navigationTitle("Select Countries")
-        .navigationBarTitleDisplayMode(.inline)
         .onAppear {
             model.searchText = ""
             Task {
