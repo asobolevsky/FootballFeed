@@ -6,11 +6,9 @@
 //
 
 import Combine
-import SwiftUI
 
-class CountryListModel: ObservableObject {
+class CountryListViewModel: ObservableObject {
     private let networkManager: NetworkManager
-    private var cancellables = Set<AnyCancellable>()
 
     private var unfilteredCountryList: [Country] = []
     @Published var countryList: [Country] = []

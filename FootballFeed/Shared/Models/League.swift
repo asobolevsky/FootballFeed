@@ -15,4 +15,10 @@ struct League: Codable {
 }
 
 extension League: Identifiable, Hashable {
+    var logoUrl: URL? {
+        guard let logo = logo else {
+            return nil
+        }
+        return URL(string: logo)
+    }
 }

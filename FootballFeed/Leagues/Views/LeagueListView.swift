@@ -19,7 +19,11 @@ struct LeagueListView: View {
             } else {
                 ZStack(alignment: .bottom) {
                     List(model.leagueList) { league in
-                        LeagueRowView(league: league)
+                        NavigationLink {
+                            TeamListView(league: league)
+                        } label: {
+                            LeagueRowView(league: league)
+                        }
                     }
                     .searchable(text: $model.searchText, prompt: "Start entering league name")
                 }
@@ -34,7 +38,7 @@ struct LeagueListView: View {
                     try await model.loadLeagueList(for: country)
                 } catch {
                     await MainActor.run {
-                        self.errorMessage = "Error loading countries"
+                        self.errorMessage = "Error loading leagues"
                     }
                 }
             }

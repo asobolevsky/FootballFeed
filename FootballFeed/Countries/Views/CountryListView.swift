@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CountryListView: View {
-    @StateObject private var model = CountryListModel()
+    @StateObject private var model = CountryListViewModel()
     @State private var errorMessage: String?
     
     var body: some View {

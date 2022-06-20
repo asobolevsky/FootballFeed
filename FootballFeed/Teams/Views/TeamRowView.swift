@@ -1,5 +1,5 @@
 //
-//  LeagueRowView.swift
+//  TeamRowView.swift
 //  FootballFeed
 //
 //  Created by Aleksei Sobolevskii on 2022-06-19.
@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct LeagueRowView: View {
-    let league: League
+struct TeamRowView: View {
+    let team: Team
 
     var body: some View {
         HStack {
-            AsyncImage(url: league.logoUrl) { image in
+            AsyncImage(url: team.logoUrl) { image in
                 image
                     .resizable()
                     .aspectRatio(contentMode: .fit)
@@ -21,14 +21,14 @@ struct LeagueRowView: View {
                     .foregroundColor(.gray)
             }
             .frame(width: 40, height: 40)
-            
-            Text(league.name)
+
+            Text(team.name)
         }
     }
 }
 
-struct LeagueRowView_Previews: PreviewProvider {
+struct TeamRowView_Previews: PreviewProvider {
     static var previews: some View {
-        LeagueRowView(league: League.example)
+        TeamRowView(team: Team.example)
     }
 }
