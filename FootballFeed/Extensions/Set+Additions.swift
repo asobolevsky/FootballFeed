@@ -20,7 +20,7 @@ extension Set {
 extension Set: RawRepresentable where Element: Codable {
     public init?(rawValue: String) {
         guard let data = rawValue.data(using: .utf8),
-              let result = try? JSONDecoder().decode(Set<Element>.self, from: data)
+              let result = try? JSONDecoder.api.decode(Set<Element>.self, from: data)
         else {
             return nil
         }

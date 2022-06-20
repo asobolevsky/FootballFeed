@@ -11,7 +11,7 @@ struct Team: Codable {
     let id: Int
     let name: String
     let code: String?
-    let country: String
+    let country: String?
     let logo: String?
 }
 

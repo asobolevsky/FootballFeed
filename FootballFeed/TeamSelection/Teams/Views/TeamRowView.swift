@@ -24,9 +24,9 @@ struct TeamRowView: View {
             .frame(width: 40, height: 40)
 
             Text(team.name)
+            Spacer()
 
             if isSelected {
-                Spacer()
                 Image(systemName: "checkmark")
                     .frame(width: 40, height: 40)
                     .foregroundColor(.green)

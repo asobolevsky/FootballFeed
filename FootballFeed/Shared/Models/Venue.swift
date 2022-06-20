@@ -10,9 +10,9 @@ import Foundation
 struct Venue: Codable {
     let id: Int
     let name: String
-    let address: String
     let city: String
-    let image: String?
+    var address: String? = nil
+    var image: String? = nil
 }
 
 extension Venue: Identifiable, Hashable {

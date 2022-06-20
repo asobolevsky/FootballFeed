@@ -28,7 +28,7 @@ class NetworkMock: APIDataProvider {
         }
 
         do {
-            let result = try JSONDecoder().decode(R.self, from: jsonData)
+            let result = try JSONDecoder.api.decode(R.self, from: jsonData)
             return result
         } catch {
             print("Decoding error: \(error)")

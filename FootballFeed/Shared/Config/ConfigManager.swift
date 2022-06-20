@@ -35,7 +35,7 @@ class ConfigManager {
         }
 
         do {
-            return try JSONDecoder().decode(AppConfig.self, from: configData)
+            return try JSONDecoder.api.decode(AppConfig.self, from: configData)
         } catch {
             throw ConfigManagerError.couldNotDecodeConfigFile
         }

@@ -10,6 +10,11 @@ import SwiftUI
 struct DashboardTabView: View {
     var body: some View {
         TabView {
+            FixturesViews()
+                .tabItem {
+                    Label("Fixtures", systemImage: "calendar")
+                }
+
             CountryListView()
                 .tabItem {
                     Label("Select", systemImage: "filemenu.and.selection")

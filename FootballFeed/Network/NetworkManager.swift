@@ -43,7 +43,7 @@ struct NetworkManager: APIDataProvider {
                 }
 
                 do {
-                    let result = try JSONDecoder().decode(R.self, from: data)
+                    let result = try JSONDecoder.api.decode(R.self, from: data)
                     continuation.resume(returning: result)
                     return
                 } catch {
