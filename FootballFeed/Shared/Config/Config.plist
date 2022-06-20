@@ -7,7 +7,7 @@
 		<key>environment</key>
 		<string>debug</string>
 		<key>footballApiBaseUrl</key>
-		<string>https://v3.football.api-sports.io/</string>
+		<string>https://v3.football.api-sports.io</string>
 		<key>apiKey</key>
 		<string>dc9d9c2e1a821ea6877779b7b1ddf836</string>
 	</dict>

@@ -18,7 +18,14 @@ struct NetworkManager {
 
     func performRequest<R: Decodable>(for resource: APIResource) async throws -> R {
         return try await withCheckedThrowingContinuation { continuation in
-            let resourceFullUrl = baseUrl.appendingPathComponent(resource.path)
+            var resourceFullUrl = baseUrl.appendingPathComponent(resource.path)
+
+            if resource.query.count > 0 {
+                let queryItems = resource.query
+                    .map { URLQueryItem(name: $0, value: $1) }
+                resourceFullUrl.append(queryItems: queryItems)
+            }
+
             var request = URLRequest(url: resourceFullUrl)
 
             request.addValue(FFApp.config.apiKey, forHTTPHeaderField: "x-apisports-key")

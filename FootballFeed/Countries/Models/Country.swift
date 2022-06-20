@@ -15,6 +15,13 @@ struct Country: Codable {
 
 extension Country: Identifiable, Hashable {
     var id: String {
-        return code ?? name
+        return name
+    }
+
+    var flagUrl: URL? {
+        guard let flag = flag else {
+            return nil
+        }
+        return URL(string: flag)
     }
 }

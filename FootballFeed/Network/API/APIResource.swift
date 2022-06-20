@@ -9,4 +9,11 @@ import Foundation
 
 protocol APIResource {
     var path: String { get }
+    var query: [String: String] { get }
+}
+
+extension APIResource {
+    var query: [String: String] {
+        [:]
+    }
 }

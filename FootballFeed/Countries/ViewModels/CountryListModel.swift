@@ -21,8 +21,6 @@ class CountryListModel: ObservableObject {
         }
     }
 
-    @Published var selectedCountries: Set<Country> = []
-
     init(networkManager: NetworkManager = NetworkManager()) {
         self.networkManager = networkManager
     }
@@ -40,8 +38,8 @@ class CountryListModel: ObservableObject {
             countryList = unfilteredCountryList
         } else {
             countryList = unfilteredCountryList
-                .filter { country in
-                    country.name.lowercased().contains(searchText) || (country.code?.lowercased().contains(searchText) ?? false)
+                .filter {
+                    $0.name.lowercased().contains(searchText) || ($0.code?.lowercased().contains(searchText) ?? false)
                 }
         }
     }
