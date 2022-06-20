@@ -8,7 +8,9 @@
 import Combine
 
 class CountryListViewModel: ObservableObject {
-    private let networkManager: NetworkManager
+    private let networkManager: APIDataProvider
+
+    private let filterCountryNames = [ "England", "Spain", "Germany", "France", "Italy", "Portugal", "Belgium" ]
 
     private var unfilteredCountryList: [Country] = []
     @Published var countryList: [Country] = []
@@ -19,13 +21,14 @@ class CountryListViewModel: ObservableObject {
         }
     }
 
-    init(networkManager: NetworkManager = NetworkManager()) {
+    init(networkManager: APIDataProvider = NetworkMock()) {
         self.networkManager = networkManager
     }
 
     func loadCountryList() async throws {
         let response: CountryListResponse = try await networkManager.performRequest(for: CountriesAPI.countries)
         unfilteredCountryList = response.response
+            .filter { filterCountryNames.contains($0.name) }
         await MainActor.run {
             self.countryList = unfilteredCountryList
         }

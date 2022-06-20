@@ -13,7 +13,7 @@ enum NetworkManagerError: Error {
     case decodingError
 }
 
-struct NetworkManager {
+struct NetworkManager: APIDataProvider {
     private let baseUrl = URL(string: FFApp.config.footballApiBaseUrl)!
 
     func performRequest<R: Decodable>(for resource: APIResource) async throws -> R {

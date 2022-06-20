@@ -8,7 +8,7 @@
 import Combine
 
 class TeamListViewModel: ObservableObject {
-    private let networkManager: NetworkManager
+    private let networkManager: APIDataProvider
 
     private var unfilteredTeamList: [Team] = []
     @Published var teamList: [Team] = []
@@ -19,7 +19,7 @@ class TeamListViewModel: ObservableObject {
         }
     }
 
-    init(networkManager: NetworkManager = NetworkManager()) {
+    init(networkManager: APIDataProvider = NetworkMock()) {
         self.networkManager = networkManager
     }
 
@@ -37,7 +37,7 @@ class TeamListViewModel: ObservableObject {
         } else {
             teamList = unfilteredTeamList
                 .filter {
-                    $0.name.lowercased().contains(searchText) || ($0.code.lowercased().contains(searchText) ?? false)
+                    $0.name.lowercased().contains(searchText) || ($0.code?.lowercased().contains(searchText) ?? false)
                 }
         }
     }

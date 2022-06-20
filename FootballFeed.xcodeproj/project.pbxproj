@@ -45,6 +45,9 @@
 		5FF34E8F285FFDDE00A66A8E /* TeamRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF34E8E285FFDDE00A66A8E /* TeamRowView.swift */; };
 		5FF34E932860015A00A66A8E /* DashboardTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF34E922860015A00A66A8E /* DashboardTabView.swift */; };
 		5FF34E97286002D200A66A8E /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF34E96286002D200A66A8E /* ProfileView.swift */; };
+		5FF34E9B2860BF5E00A66A8E /* MockResponses in Resources */ = {isa = PBXBuildFile; fileRef = 5FF34E9A2860BF5E00A66A8E /* MockResponses */; };
+		5FF34E9D2860C05000A66A8E /* APIDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF34E9C2860C05000A66A8E /* APIDataProvider.swift */; };
+		5FF34E9F2860C07F00A66A8E /* NetworkMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF34E9E2860C07F00A66A8E /* NetworkMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +89,9 @@
 		5FF34E8E285FFDDE00A66A8E /* TeamRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamRowView.swift; sourceTree = "<group>"; };
 		5FF34E922860015A00A66A8E /* DashboardTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTabView.swift; sourceTree = "<group>"; };
 		5FF34E96286002D200A66A8E /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		5FF34E9A2860BF5E00A66A8E /* MockResponses */ = {isa = PBXFileReference; lastKnownFileType = folder; path = MockResponses; sourceTree = "<group>"; };
+		5FF34E9C2860C05000A66A8E /* APIDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIDataProvider.swift; sourceTree = "<group>"; };
+		5FF34E9E2860C07F00A66A8E /* NetworkMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,8 +150,11 @@
 		5F84E1CA285D715A002CE9F0 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				5FF34E9A2860BF5E00A66A8E /* MockResponses */,
 				5F84E1D3285D72F6002CE9F0 /* API */,
+				5FF34E9C2860C05000A66A8E /* APIDataProvider.swift */,
 				5F84E1CB285D71D3002CE9F0 /* NetworkManager.swift */,
+				5FF34E9E2860C07F00A66A8E /* NetworkMock.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -449,6 +458,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F84E1C4285D7043002CE9F0 /* Preview Assets.xcassets in Resources */,
+				5FF34E9B2860BF5E00A66A8E /* MockResponses in Resources */,
 				5F84E1D0285D7260002CE9F0 /* Config.plist in Resources */,
 				5F84E1C1285D7043002CE9F0 /* Assets.xcassets in Resources */,
 			);
@@ -464,6 +474,7 @@
 				5F84E1F0285D81F1002CE9F0 /* CountryRowView.swift in Sources */,
 				5F84E1D5285D7300002CE9F0 /* CountriesAPI.swift in Sources */,
 				5F84E1BF285D7041002CE9F0 /* ContentView.swift in Sources */,
+				5FF34E9D2860C05000A66A8E /* APIDataProvider.swift in Sources */,
 				5FF34E5E285E4B3400A66A8E /* LeagueListView.swift in Sources */,
 				5F84E1CC285D71D3002CE9F0 /* NetworkManager.swift in Sources */,
 				5FF34E8D285FFCBD00A66A8E /* Team+PreviewData.swift in Sources */,
@@ -492,6 +503,7 @@
 				5F84E1BD285D7041002CE9F0 /* FootballFeedApp.swift in Sources */,
 				5F84E1F6285D84C0002CE9F0 /* Dictionary+JSON.swift in Sources */,
 				5F84E1E5285D7DDC002CE9F0 /* CountryListViewModel.swift in Sources */,
+				5FF34E9F2860C07F00A66A8E /* NetworkMock.swift in Sources */,
 				5FF34E68285EDEA200A66A8E /* LeagueListResponse.swift in Sources */,
 				5FF34E64285EDBBA00A66A8E /* LeaguesAPI.swift in Sources */,
 				5F84E1D2285D72C3002CE9F0 /* ConfigManager.swift in Sources */,

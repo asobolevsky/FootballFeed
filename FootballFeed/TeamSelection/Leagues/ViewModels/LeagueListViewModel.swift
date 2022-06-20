@@ -8,7 +8,7 @@
 import Foundation
 
 class LeagueListViewModel: ObservableObject {
-    private let networkManager: NetworkManager
+    private let networkManager: APIDataProvider
     private var unfilteredLeagueList: [League] = []
     @Published var leagueList: [League] = []
 
@@ -18,7 +18,7 @@ class LeagueListViewModel: ObservableObject {
         }
     }
 
-    init(networkManager: NetworkManager = NetworkManager()) {
+    init(networkManager: APIDataProvider = NetworkMock()) {
         self.networkManager = networkManager
     }
 

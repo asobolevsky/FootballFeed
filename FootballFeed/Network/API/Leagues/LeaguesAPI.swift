@@ -22,6 +22,8 @@ enum LeaguesAPI: APIResource {
             return [
                 "code": code,
                 "country": country,
+                "type": "league",
+                "season": "2022",
             ].compactMapValues { $0 }
         }
     }
